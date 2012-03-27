@@ -606,6 +606,7 @@ class GitAddChoiceCommand(GitStatusCommand):
             args = ["--", picked_file.strip('"')]
 
         self.run_command(['git', 'add'] + args,
+            self.run(),
             working_dir=git_root(self.get_working_dir()))
 
 
